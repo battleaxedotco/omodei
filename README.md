@@ -1,10 +1,12 @@
 # omodei
 
-It's a chore to hunt down common cubic-bezier values for CSS transitions, so why not collect all the best ones and make them easy to retrieve and use instead?
+It's a chore to hunt down common cubic-bezier values for CSS transitions, so why not collect over 100 of the best ones and make them easy to retrieve and use instead?
+
+Unashamedly heavily influenced by one of my favorite AE extensions, [Flow](https://aescripts.com/flow/), one of the best tools to come out in the last few years.
 
 ### [Check out the demo here](https://omodei.netlify.app/)
 
-![](https://github.com/Inventsable/omodei-sandbox/blob/master/src/assets/screenshot.png?raw=true)
+![](https://github.com/Inventsable/omodei-sandbox/raw/master/src/assets/screenshot.png?raw=true)
 
 ## Installation
 
@@ -49,74 +51,68 @@ omodei.assignLibraryByAuthor("google"); // Sets all Google CSS variables
 <a name="getLibraryByAuthor"></a>
 
 ## getLibraryByAuthor(name) ⇒ <code>Object</code>
-
 Retrieves all cubic-bezier animations of an author
 
 **Kind**: global function  
-**Returns**: <code>Object</code> - Collection of cubic-bezier strings
+**Returns**: <code>Object</code> - Collection of cubic-bezier strings  
 
-| Param | Type                | Description                               |
-| ----- | ------------------- | ----------------------------------------- |
-| name  | <code>String</code> | Name of the author to retrieve library of |
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>String</code> | Name of the author to retrieve library of |
 
 <a name="getAll"></a>
 
 ## getAll()
-
 Collects all cubic-bezier strings from all authors
 
 **Kind**: global function  
 <a name="assignAll"></a>
 
 ## assignAll()
-
 Assigns all cubic-bezier strings as CSS variables to the active document
 
 **Kind**: global function  
 <a name="assignLibraryByAuthor"></a>
 
 ## assignLibraryByAuthor(name)
-
 Assigns all cubic-bezier strings of a particular author to active document
 
-**Kind**: global function
+**Kind**: global function  
 
-| Param | Type                | Description                               |
-| ----- | ------------------- | ----------------------------------------- |
-| name  | <code>String</code> | Name of the author to retrieve library of |
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>String</code> | Name of the author to retrieve library of |
 
 <a name="getByName"></a>
 
 ## getByName(name) ⇒ <code>String</code>
-
 **Kind**: global function  
-**Returns**: <code>String</code> - Cubic bezier string
+**Returns**: <code>String</code> - Cubic bezier string  
 
-| Param | Type                | Description                 |
-| ----- | ------------------- | --------------------------- |
-| name  | <code>String</code> | Name of cubic-bezier timing |
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>String</code> | Name of cubic-bezier timing |
 
 <a name="getCSS"></a>
 
 ## getCSS(prop)
-
 Retrieves the current value of a given CSS variable
 
-**Kind**: global function
+**Kind**: global function  
 
-| Param | Type                | Description                                                 |
-| ----- | ------------------- | ----------------------------------------------------------- |
-| prop  | <code>String</code> | The target name of variable, with or without leading dashes |
+| Param | Type | Description |
+| --- | --- | --- |
+| prop | <code>String</code> | The target name of variable, with or without leading dashes |
 
 <a name="setCSS"></a>
 
 ## setCSS(prop, data)
-
 Sets the value of a given CSS variable
 
-**Kind**: global function
+**Kind**: global function  
 
-| Param | Type                | Description                                                 |
-| ----- | ------------------- | ----------------------------------------------------------- |
-| prop  | <code>String</code> | The target name of variable, with or without leading dashes |
-| data  | <code>String</code> | The new CSS value to assign to variable                     |
+| Param | Type | Description |
+| --- | --- | --- |
+| prop | <code>String</code> | The target name of variable, with or without leading dashes |
+| data | <code>String</code> | The new CSS value to assign to variable |
+
