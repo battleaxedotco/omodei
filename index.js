@@ -1,6 +1,6 @@
 const libraries = require("./libraries.json");
 if (!String.slug)
-  String.prototype.slug = function() {
+  String.prototype.slug = function () {
     let val = this[0].toLowerCase() + this.substring(1);
     return val
       .replace(/\s/gm, "")
@@ -12,6 +12,11 @@ function constructAsCubicBezierString(obj) {
   return `cubic-bezier(${obj.x1}, ${obj.y1}, ${obj.x2}, ${obj.y2})`;
 }
 
+/**
+ * Retrieves all cubic-bezier animations of an author
+ * @param {String} name Name of the author to retrieve library of
+ * @returns {Object} Collection of cubic-bezier strings
+ */
 function getLibraryByAuthor(name) {
   name = name.slug();
   if (!libraries[name]) {
@@ -37,6 +42,9 @@ function constructLibraryFromAuthor(name) {
   return temp;
 }
 
+/**
+ * Collects all cubic-bezier strings from all authors
+ */
 function getAll() {
   let result = {};
   for (let name in libraries) {
@@ -48,6 +56,9 @@ function getAll() {
   return result;
 }
 
+/**
+ * Assigns all cubic-bezier strings as CSS variables to the active document
+ */
 function assignAll() {
   let temp = getAll();
   for (let author in temp)
@@ -55,12 +66,21 @@ function assignAll() {
   return true;
 }
 
+/**
+ * Assigns all cubic-bezier strings of a particular author to active document
+ * @param {String} name Name of the author to retrieve library of
+ */
 function assignLibraryByAuthor(name) {
   let temp = getLibraryByAuthor(name.slug());
   for (let value in temp) setCSS(value, temp[value]);
   return true;
 }
 
+/**
+ *
+ * @param {String} name Name of cubic-bezier timing
+ * @returns {String} Cubic bezier string
+ */
 function getByName(name) {
   let found = false;
   for (let author in libraries) {
