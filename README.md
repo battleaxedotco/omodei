@@ -4,6 +4,8 @@ It's a chore to hunt down common cubic-bezier values for CSS transitions, so why
 
 ### [Check out the demo here](https://omodei.netlify.app/)
 
+![](https://github.com/Inventsable/omodei-sandbox/blob/master/src/assets/screenshot.png?raw=true)
+
 ## Installation
 
 ```bash
